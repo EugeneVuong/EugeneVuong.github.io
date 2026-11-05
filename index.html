@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Eugene Vuong</title>
+  <meta name="description" content="Eugene Vuong is a Ph.D. student in the Systems and Networking Lab at UC Santa Barbara, working on AI agents for networking, network traffic datasets, and broadband measurement.">
+  <meta property="og:title" content="Eugene Vuong">
+  <meta property="og:description" content="Ph.D. student, UCSB Systems and Networking Lab. AI agents for networking, realistic traffic datasets, and broadband measurement.">
+  <meta property="og:image" content="assets/img/eugene-vuong.jpg">
+  <meta name="theme-color" content="#0A0A0A">
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav">
+    <div class="wrap nav__inner">
+      <a class="wordmark" href="#top" aria-label="Eugene Vuong, home">eugene<span>vuong</span></a>
+      <nav aria-label="Sections">
+        <ul class="nav__links">
+          <li><a href="#research">Research</a></li>
+          <li><a href="#papers">Papers</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a class="btn btn--small" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero wrap" id="top">
+      <div class="hero__text">
+        <p class="eyebrow"><span class="dot" aria-hidden="true"></span>Ph.D. student · UCSB Systems &amp; Networking Lab</p>
+        <h1 class="hero__title">I teach AI agents to use the web, so networks can <em>learn from the traffic</em> they leave behind.</h1>
+        <p class="hero__bio">
+          I'm a first-year Ph.D. student in Computer Science at UC Santa Barbara, advised by
+          <a href="https://sites.cs.ucsb.edu/~arpitgupta/">Prof. Arpit Gupta</a> in the Systems and Networking Lab (SNL),
+          and a graduate research assistant with the ESnet group at Lawrence Berkeley National Laboratory.
+          My research covers machine learning for networking and systems, AI agents that automate network application
+          workflows, realistic network traffic datasets, and large-scale broadband measurement to inform policy.
+        </p>
+        <ul class="links">
+          <li><a href="mailto:eugenevuong@ucsb.edu"><span class="mono">@</span> eugenevuong@ucsb.edu</a></li>
+          <li><a href="https://github.com/EugeneVuong">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/eugene-vuong">LinkedIn</a></li>
+        </ul>
+      </div>
+
+      <figure class="portrait">
+        <div class="portrait__frame">
+          <img src="assets/img/eugene-vuong.jpg" width="640" height="640" alt="Headshot of Eugene Vuong">
+        </div>
+        <figcaption class="mono">
+          <span>Santa Barbara, CA</span>
+          <span id="clock" aria-live="off">PT</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- News -->
+    <section class="wrap log" aria-labelledby="log-title">
+      <div class="log__card">
+        <p class="log__prompt mono" id="log-title"><span class="signal">$</span> tail -n 6 ~/life.log</p>
+        <ol class="log__list">
+          <li><time class="mono">Oct 2026</time><span>Started as a graduate research assistant with the ESnet group at <strong>Berkeley Lab</strong>.</span></li>
+          <li><time class="mono">Sep 2026</time><span>Started my Ph.D. at <strong>UC Santa Barbara</strong> with Prof. Arpit Gupta.</span></li>
+          <li><time class="mono">2026</time><span><strong>Pramana</strong> accepted to ACM HotNets 2026 in Salt Lake City.</span></li>
+          <li><time class="mono">Dec 2025</time><span>Graduated from <strong>Cal State East Bay</strong>, B.S. in Computer Science.</span></li>
+          <li><time class="mono">Dec 2025</time><span>Honorable Mention, <strong>CRA Outstanding Undergraduate Researcher Award</strong>.</span></li>
+          <li><time class="mono">2025</time><span><strong>NetGent</strong> accepted to the NeurIPS 2025 ML for Systems workshop.</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Research -->
+    <section class="section wrap" id="research" aria-labelledby="research-title">
+      <div class="section__head">
+        <p class="kicker mono">01</p>
+        <h2 id="research-title">Research</h2>
+        <p class="section__sub">Agents that operate real systems, and the measurement infrastructure that keeps them honest.</p>
+      </div>
+
+      <div class="research">
+
+        <article class="rcard">
+          <figure class="rcard__fig"><img src="assets/img/fig-netgent-1.png" width="1600" height="300" alt="NetGent runtime loop: program controller, state repository cache, state synthesis by the web agent, and state executor" loading="lazy"></figure>
+          <div class="rcard__body">
+            <p class="tag mono">NeurIPS 2025 · ML4Sys</p>
+            <h3>NetGent: compile a browser task once, replay it forever</h3>
+            <p>An agent framework that automates complex web workflows to generate realistic network traffic datasets. Agents explore a task once, the result compiles into a state machine, and replays run without calling the model.</p>
+            <p class="role"><span class="mono">My part</span> Built the framework and validated it on 50+ workflows, cutting the projected LLM cost of a million-run collection from $98,000 to under $10 a year.</p>
+            <p class="actions"><a href="https://arxiv.org/abs/2509.00625">Paper</a><a href="https://github.com/EugeneVuong/netgent">Code</a></p>
+          </div>
+        </article>
+
+        <article class="rcard">
+          <figure class="rcard__fig"><img src="assets/img/fig-bqt-1.png" width="1600" height="219" alt="BQT+ state graph: landing, popup, input address, plans, and no-service states" loading="lazy"></figure>
+          <div class="rcard__body">
+            <p class="tag mono">arXiv 2026 · Policy</p>
+            <h3>BQT+: robust, extensible measurement of broadband plans</h3>
+            <p>A querying tool that collects advertised broadband plans and prices at the address level, so regulators and researchers can see what households are actually offered.</p>
+            <p class="role"><span class="mono">My part</span> Scaled NetGent to reach pricing pages on 100+ ISP domains from plain-English instructions, and built the queueing pipeline behind every user-submitted job.</p>
+            <p class="actions"><a href="https://arxiv.org/abs/2602.16969">Paper</a><a href="https://arxiv.org/abs/2511.05838">Policy paper</a></p>
+          </div>
+        </article>
+
+        <article class="rcard">
+          <figure class="rcard__fig"><img src="assets/img/fig-pramana-1.png" width="1600" height="862" alt="Pramana thin waist: research activities on top, intent specification in the middle, local, cloud, and testbed substrates below" loading="lazy"></figure>
+          <div class="rcard__body">
+            <p class="tag mono">HotNets 2026</p>
+            <h3>Pramana: one backend for empirical networking research</h3>
+            <p>A composable, domain-specific backend that sits between what a researcher wants to measure and where it runs: local machines, the cloud, or testbeds.</p>
+            <p class="actions"><a href="https://arxiv.org/abs/2607.26352">Paper</a></p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Publications -->
+    <section class="section wrap" id="papers" aria-labelledby="papers-title">
+      <div class="section__head">
+        <p class="kicker mono">02</p>
+        <h2 id="papers-title">Publications</h2>
+        <p class="section__sub mono legend">C = conference · W = workshop · S = preprint</p>
+      </div>
+
+      <ol class="pubs">
+        <li class="pub">
+          <span class="pub__id mono">W.2</span>
+          <div>
+            <p class="pub__title">Pramana: A Composable, Domain-Specific Backend for Empirical Networking Research</p>
+            <p class="pub__authors">J. Daneshamooz, <b>E. Vuong</b>, A. Ramanathan, M. Moghimi, H. Manda, S. Kumar, S. Thode, S. Guthula, S. Beltiukov, D. Han, T. Mangla, S. Abdu Jyothi, W. Willinger, A. Gupta</p>
+            <p class="pub__venue mono">ACM HotNets 2026 · Salt Lake City <a href="https://arxiv.org/abs/2607.26352">arXiv</a></p>
+          </div>
+        </li>
+        <li class="pub">
+          <span class="pub__id mono">C.1</span>
+          <div>
+            <p class="pub__title">A Study of Large Language Model Performance for Phishing URL Detection and Explainability for User-Centric Security</p>
+            <p class="pub__authors">J. Kaur, <b>E. Vuong</b>, H. Li</p>
+            <p class="pub__venue mono">IEEE SVCC 2026 · San Jose <a href="https://doi.org/10.1109/SVCC69905.2026.11642313">DOI</a></p>
+          </div>
+        </li>
+        <li class="pub">
+          <span class="pub__id mono">S.2</span>
+          <div>
+            <p class="pub__title">Robust and Extensible Measurement of Broadband Plans with BQT+</p>
+            <p class="pub__authors">L. Koduru, S. Beltiukov, A. Nguyen, <b>E. Vuong</b>, J. Daneshamooz, T. Narechania, E. Belding, A. Gupta</p>
+            <p class="pub__venue mono">arXiv preprint, 2026 <a href="https://arxiv.org/abs/2602.16969">arXiv</a></p>
+          </div>
+        </li>
+        <li class="pub">
+          <span class="pub__id mono">W.1</span>
+          <div>
+            <p class="pub__title">NetGent: Agent-Based Automation of Network Application Workflows</p>
+            <p class="pub__authors">J. Daneshamooz, <b>E. Vuong</b>, L. Koduru, S. Chandrasekaran, A. Gupta</p>
+            <p class="pub__venue mono">NeurIPS 2025 · ML for Systems Workshop <a href="https://arxiv.org/abs/2509.00625">arXiv</a> <a href="https://github.com/EugeneVuong/netgent">Code</a></p>
+          </div>
+        </li>
+        <li class="pub">
+          <span class="pub__id mono">S.1</span>
+          <div>
+            <p class="pub__title">Enabling Data-Driven Policymaking Using Broadband-Plan Querying Tool (BQT+)</p>
+            <p class="pub__authors">L. Koduru, S. Beltiukov, J. Daneshamooz, <b>E. Vuong</b>, A. Gupta, E. Belding, T. N. Narechania</p>
+            <p class="pub__venue mono">arXiv preprint, 2025 <a href="https://arxiv.org/abs/2511.05838">arXiv</a></p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Experience -->
+    <section class="section wrap" id="experience" aria-labelledby="exp-title">
+      <div class="section__head">
+        <p class="kicker mono">03</p>
+        <h2 id="exp-title">Experience</h2>
+        <p class="section__sub mono">Santa Barbara · Berkeley · Hayward</p>
+      </div>
+
+      <ol class="timeline">
+        <li>
+          <p class="when mono">Oct 2026 — now <span class="tag__live">Current</span></p>
+          <div>
+            <h3>Lawrence Berkeley National Laboratory</h3>
+            <p class="what">Graduate Student Research Assistant, ESnet</p>
+            <p>Research with Prof. Arpit Gupta and the ESnet group on proactive, agent-driven network operations.</p>
+          </div>
+        </li>
+        <li>
+          <p class="when mono">Feb — Aug 2026</p>
+          <div>
+            <h3>UC Santa Barbara</h3>
+            <p class="what">Staff Research Associate, Systems and Networking Lab</p>
+            <p>Scaled NetGent to 100+ ISP domains for BQT+, built a RabbitMQ and Docker pipeline that runs every user-submitted job, and led the launch of a Next.js app measuring 1,000+ broadband plans.</p>
+          </div>
+        </li>
+        <li>
+          <p class="when mono">Summer 2025</p>
+          <div>
+            <h3>UC Santa Barbara</h3>
+            <p class="what">Research Intern, Systems and Networking Lab</p>
+            <p>Built NetGent. Validated it on 50+ workflows and cut average workflow time by 57% with 50 concurrent Docker workers.</p>
+          </div>
+        </li>
+        <li>
+          <p class="when mono">Summer 2023</p>
+          <div>
+            <h3>Lawrence Berkeley National Laboratory</h3>
+            <p class="what">Research Intern</p>
+            <p>Added residual connections to a U-Net for elemental analysis (25% lower RMSE), sped up emission-spectrum simulation by 96% with Numba, and cleaned a 118,000-record dataset.</p>
+          </div>
+        </li>
+        <li>
+          <p class="when mono">2022 — 2024</p>
+          <div>
+            <h3>Cal State East Bay</h3>
+            <p class="what">Data Analyst Intern</p>
+            <p>Fixed user-ID errors across 91,000+ CRM records, automated 7,400+ updates, and cut a 50,000-record mailing list by 38%.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Projects -->
+    <section class="section wrap" id="projects" aria-labelledby="proj-title">
+      <div class="section__head">
+        <p class="kicker mono">04</p>
+        <h2 id="proj-title">Hackathons</h2>
+        <p class="section__sub">Built in 24 to 36 hours.</p>
+      </div>
+
+      <div class="projects">
+        <article class="pcard">
+          <img src="assets/img/proj-callflow-1.jpg" width="960" height="540" alt="CallFlow pitch slide on call-center spend" loading="lazy">
+          <div class="pcard__body">
+            <p class="award mono">1st place · Grand Prize</p>
+            <h3>CallFlow</h3>
+            <p>A customer-service voice agent that handles routine requests and pauses for a human on anything risky, with fraud detection built in.</p>
+            <p class="meta mono">AI Tinkerers 2024 · Gemini · Vapi · Next.js</p>
+            <a class="stretch" href="https://sf.aitinkerers.org/hackathons/h_tV5wkIy3tdE/showcase" aria-label="CallFlow on AI Tinkerers"></a>
+          </div>
+        </article>
+        <article class="pcard">
+          <img src="assets/img/proj-secondsight-1.jpg" width="960" height="474" alt="Second Sight interface with a live camera feed and an AI security assistant chat" loading="lazy">
+          <div class="pcard__body">
+            <p class="award mono">1st place · Activeloop track</p>
+            <h3>Second Sight</h3>
+            <p>Turns old phones into smart security cameras you can search in plain English, with sub-second retrieval over 10+ hours of footage.</p>
+            <p class="meta mono">Multimodal Hackathon 2025 · Deep Lake · Gemini</p>
+            <a class="stretch" href="https://devpost.com/software/second-sight" aria-label="Second Sight on Devpost"></a>
+          </div>
+        </article>
+        <article class="pcard">
+          <img src="assets/img/proj-easyads-1.jpg" width="960" height="540" alt="EasyAds architecture slide" loading="lazy">
+          <div class="pcard__body">
+            <p class="award mono">Best use of Freepik API</p>
+            <h3>EasyAds</h3>
+            <p>Agents that spot trending products and cut a video ad for them in under five minutes.</p>
+            <p class="meta mono">Self-Evolving Agents Hack 2025 · Linkup · Freepik</p>
+            <a class="stretch" href="https://devpost.com/software/easyads" aria-label="EasyAds on Devpost"></a>
+          </div>
+        </article>
+        <article class="pcard">
+          <img src="assets/img/proj-mentora-2.jpg" width="960" height="540" alt="Mentora learning roadmap graph" loading="lazy">
+          <div class="pcard__body">
+            <p class="award mono">Honorable mention · Letta track</p>
+            <h3>Mentora</h3>
+            <p>Type any goal: a root agent seeds topics while search agents grow each branch into a learning roadmap.</p>
+            <p class="meta mono">Cal Hacks 2025 · Letta · OpenAI · Flask</p>
+            <a class="stretch" href="https://devpost.com/software/planevent" aria-label="Mentora on Devpost"></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Elsewhere -->
+    <section class="section wrap" id="more" aria-labelledby="more-title">
+      <div class="section__head">
+        <p class="kicker mono">05</p>
+        <h2 id="more-title">Elsewhere</h2>
+      </div>
+
+      <div class="grid3">
+        <div class="mini">
+          <h3 class="mini__title mono">Education</h3>
+          <dl>
+            <div><dt>UC Santa Barbara</dt><dd>Ph.D., Computer Science</dd><dd class="mono">2026 — 2031 (expected)</dd></div>
+            <div><dt>Cal State East Bay</dt><dd>B.S., Computer Science</dd><dd class="mono">Dec 2025</dd></div>
+          </dl>
+        </div>
+        <div class="mini">
+          <h3 class="mini__title mono">Honors</h3>
+          <dl>
+            <div><dt>CRA Outstanding Undergraduate Researcher</dt><dd>Honorable Mention</dd><dd class="mono">2025</dd></div>
+            <div><dt>Cal-Bridge Fellowship</dt><dd>Cohort 11 · CSU to UC Ph.D. pathway</dd><dd class="mono">2024</dd></div>
+            <div><dt>Ytha &amp; Joanne Yu Scholarship</dt><dd>Endowed CS award, CSU East Bay</dd><dd class="mono">2024</dd></div>
+          </dl>
+        </div>
+        <div class="mini">
+          <h3 class="mini__title mono">Community</h3>
+          <dl>
+            <div><dt>Google Developer Group, CSU East Bay</dt><dd>Chapter lead, grew it to 400+ members</dd><dd class="mono">2024 — 2025</dd></div>
+          </dl>
+          <h3 class="mini__title mono">Toolbox</h3>
+          <p class="tools mono">Python · TypeScript · PyTorch · LangGraph · Playwright · Docker · Kubernetes · RabbitMQ · PostgreSQL · Next.js</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact wrap" id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title" class="contact__title">If you work on agents, measurement, or making the Internet legible, I'd love to hear from you.</h2>
+      <p class="contact__links">
+        <a class="btn" href="mailto:eugenevuong@ucsb.edu">eugenevuong@ucsb.edu</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer wrap mono">
+    <span>© 2026 Eugene Vuong</span>
+    <span>Last updated Nov 2026</span>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
