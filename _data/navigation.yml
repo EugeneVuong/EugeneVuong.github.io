@@ -1,0 +1,10 @@
+# Order of the links in the site header.
+main:
+  - title: "Publications"
+    url: /publications/
+
+  - title: "Research"
+    url: /research/
+
+  - title: "CV"
+    url: /files/Eugene-Vuong-CV.pdf
