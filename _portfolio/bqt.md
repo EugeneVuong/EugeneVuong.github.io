@@ -1,7 +1,7 @@
 ---
 title: "BQT+: robust, extensible measurement of broadband plans"
 order: 3
-excerpt: "**arXiv 2026 · Policy.** A querying tool that collects advertised broadband plans and prices at the address level."
+excerpt: "**arXiv 2026 · PRIME 2025.** A querying tool that collects advertised broadband plans and prices at the address level."
 header:
   teaser: fig-bqt-1.png
 collection: portfolio
@@ -13,4 +13,4 @@ BQT+ collects the broadband plans and prices that ISPs advertise at individual a
 
 **My part:** I scaled NetGent to reach pricing pages on 100+ ISP domains from plain-English instructions, built the RabbitMQ and Docker queueing pipeline behind every user-submitted job, and led the launch of a Next.js app measuring 1,000+ broadband plans.
 
-[Paper (arXiv)](https://arxiv.org/abs/2602.16969) · [Policy paper (arXiv)](https://arxiv.org/abs/2511.05838)
+[Paper (arXiv)](https://arxiv.org/abs/2602.16969) · [Policy paper (PRIME 2025)](https://arxiv.org/abs/2511.05838)
