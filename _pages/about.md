@@ -9,7 +9,7 @@ redirect_from:
 
 I'm a first-year Ph.D. student in Computer Science at UC Santa Barbara, advised by [Prof. Arpit Gupta](https://sites.cs.ucsb.edu/~arpitgupta/) in the Systems and Networking Lab (SNL). I'm also a graduate research assistant with the ESnet group at Lawrence Berkeley National Laboratory.
 
-I build AI agents that use the web and run real systems, and I use them to study networks. My research covers machine learning for networking and systems, agents that automate network application workflows, realistic network traffic datasets, and large-scale broadband measurement to inform policy.
+I build AI agents for proactive network management: which telemetry an agent should read, and when, to catch outages and intrusions early. I develop this on ESnet's backbone telemetry. Before this, I built agents that automate network application workflows, and used them to generate realistic network traffic datasets and to measure broadband plans at scale to inform policy.
 
 Current work
 ======
